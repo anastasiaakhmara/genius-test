@@ -11,7 +11,7 @@
 
 
 /* Base */
-* {
+* , *::after, *::before {
     box-sizing: border-box;
 }
 
@@ -20,6 +20,10 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+a {
+    display: inline-block;
 }
 
 body {
@@ -206,6 +210,12 @@ margin-bottom: 16px;
     box-shadow: -16px 16px 0 0 var(--color-primary-light), -16px 16px 0 2px var(--color-secondary-dark);
 }
 
+.chef-text p {
+    margin-bottom: 24px;
+}
+.chef-text p:last-child {
+    margin-bottom: 0;
+}
 .chefs-title::before, 
 .chefs-title::after  {
     content: '';
@@ -213,6 +223,19 @@ margin-bottom: 16px;
     width: 352px;
     display: block;
     
+}
+.chefs-item {
+    flex-basis: calc((100% - 30px)/ 2);
+}
+.chefs-list {
+    display: flex;
+    gap: 40px 30px;
+    flex-wrap: wrap;
+}
+
+.chef-card {
+    display: flex;
+    gap: 30px;
 }
 /* Formats section */
 
@@ -230,6 +253,14 @@ margin-bottom: 16px;
     flex-wrap: wrap;
     
 }
+
+.formats-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
 
 .formats-item {
     flex-basis: calc((100% - 40px) / 3);
@@ -261,7 +292,7 @@ margin-bottom: 16px;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-   
+   flex-shrink: 0;
     fill: var(--color-primary-dark);
 }
 
@@ -273,10 +304,22 @@ margin-bottom: 16px;
 
 
 /* Contacts */
+.contact-section {
+    padding-bottom: 96px;
+}
+
 .contact-title {
     margin-bottom: 16px;
 }
-
+.contact-container {
+    display: flex;
+    gap: 32px;
+}
+.contact-map {
+    flex-shrink: 0;
+    border: none;
+    border-radius: 16px;
+}
 /* Footer */
 .footer {
     background-image: url(../images/footer-background.png);
@@ -284,6 +327,31 @@ margin-bottom: 16px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    padding: 32px 0;
+}
+.footer-container {
+    display: flex;
+    gap: 20px;
+  
+}
+.footer-nav {
+    flex-basis: 50%;
+    display: flex;
+    gap: 20px;
+}
+.footer-adress {
+    flex-basis: 50%;
+    display: flex;
+    gap: 20px;
+}
+.footer-logo {
+    flex-grow: 1;
+}
+.footer-menu {
+    flex-grow: 1;
+}
+.adress-list, .adress-info {
+    flex-grow: 1;
 }
 
 /* Address section */
