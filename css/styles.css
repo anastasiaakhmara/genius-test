@@ -317,8 +317,15 @@ margin-bottom: 16px;
 }
 .contact-map {
     flex-shrink: 0;
-    border: none;
+        border: none;
     border-radius: 16px;
+}
+
+.contact-container {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
 }
 /* Footer */
 .footer {
